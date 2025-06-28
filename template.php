@@ -201,7 +201,8 @@
             <?php if ($isInterested): ?>
               <div style="margin-top: 20px; padding: 15px; background: #d4edda; border-radius: 5px; color: #155724;">
                 <strong>What's Next?</strong><br>
-                We'll review your project details and get back to you within 24 hours with next steps.
+                We'll review your project details and get back to you via the original method of communication within 24
+                hours with next steps.
               </div>
             <?php endif; ?>
 
