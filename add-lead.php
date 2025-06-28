@@ -303,11 +303,6 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="demo1Description">Description</label>
-                                <textarea id="demo1Description" name="demo1Desc" style="min-height: 80px;"></textarea>
-                            </div>
-
-                            <div class="form-group">
                                 <label for="demo1Image">Image</label>
                                 <input type="text" id="demo1Image" name="demo1Image">
                             </div>
@@ -333,11 +328,6 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="demo2Description">Description</label>
-                                <textarea id="demo2Description" name="demo2Desc" style="min-height: 80px;"></textarea>
-                            </div>
-
-                            <div class="form-group">
                                 <label for="demo2Image">Image</label>
                                 <input type="text" id="demo2Image" name="demo2Image">
                             </div>
@@ -360,11 +350,6 @@
                             <div class="form-group">
                                 <label for="demo3Type">Type</label>
                                 <input type="text" id="demo3Type" name="demo3Type">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="demo3Description">Description</label>
-                                <textarea id="demo3Description" name="demo3Desc" style="min-height: 80px;"></textarea>
                             </div>
 
                             <div class="form-group">
@@ -433,14 +418,6 @@
             }
         }
 
-        // Auto-generate slug from title
-        document.getElementById('title').addEventListener('input', function () {
-            const slugField = document.getElementById('slug');
-            if (!slugField.value || slugField.value === generateSlug(this.previousValue)) {
-                slugField.value = generateSlug(this.value);
-            }
-            this.previousValue = this.value;
-        });
 
         function generateSlug(text) {
             return text
