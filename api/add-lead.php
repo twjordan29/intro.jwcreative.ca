@@ -21,9 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $interested = "Waiting for response";
 
 
-    if (empty($clientName) || empty($description) || empty($slug)) {
+    if (empty($clientName) || empty($slug) || empty($originalPrice) || empty($offerPrice)) {
         http_response_code(400);
-        echo "All fields are required.";
+        echo "All required fields must be filled out.";
         exit;
     }
 
