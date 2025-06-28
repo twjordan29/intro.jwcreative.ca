@@ -3,7 +3,6 @@ require_once '../config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $clientName = $_POST['clientName'] ?? '';
-    $description = $_POST['description'] ?? '';
     $slug = $_POST['slug'] ?? '';
     $originalPrice = $_POST['originalPrice'] ?? '';
     $offerPrice = $_POST['offerPrice'] ?? '';
@@ -31,8 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    $stmt = $conn->prepare("INSERT INTO leads (client_name, description, slug, original_price, offer_price, demo1_type, demo1_title, demo1_desc, demo1_image, demo1_url, demo2_type, demo2_title, demo2_desc, demo2_image, demo2_url, demo3_type, demo3_title, demo3_desc, demo3_image, demo3_url, interested) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssddssssssssssssssss", $clientName, $description, $slug, $originalPrice, $offerPrice, $demo1Type, $demo1Title, $demo1Desc, $demo1Image, $demo1Url, $demo2Type, $demo2Title, $demo2Desc, $demo2Image, $demo2Url, $demo3Type, $demo3Title, $demo3Desc, $demo3Image, $demo3Url, $interested);
+    $stmt = $conn->prepare("INSERT INTO leads (client_name, slug, original_price, offer_price, demo1_type, demo1_title, demo1_desc, demo1_image, demo1_url, demo2_type, demo2_title, demo2_desc, demo2_image, demo2_url, demo3_type, demo3_title, demo3_desc, demo3_image, demo3_url, interested) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssddssssssssssssssss", $clientName, $slug, $originalPrice, $offerPrice, $demo1Type, $demo1Title, $demo1Desc, $demo1Image, $demo1Url, $demo2Type, $demo2Title, $demo2Desc, $demo2Image, $demo2Url, $demo3Type, $demo3Title, $demo3Desc, $demo3Image, $demo3Url, $interested);
 
     if ($stmt->execute()) {
         echo "Lead added successfully.";

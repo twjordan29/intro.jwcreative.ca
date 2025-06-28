@@ -29,7 +29,6 @@
   <div class="container main-content">
     <div class="section">
       <h2>Transform Your Online Presence</h2>
-      <p><?= nl2br(htmlspecialchars($lead['description'])) ?></p>
       <p><strong>Here's exactly what you'll get:</strong></p>
       <ul>
         <li>

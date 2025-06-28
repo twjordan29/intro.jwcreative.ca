@@ -270,11 +270,6 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="description">Description</label>
-                        <textarea id="description" name="description" required></textarea>
-                    </div>
-
-                    <div class="form-group">
                         <label for="originalPrice">Original Price</label>
                         <input type="number" id="originalPrice" name="originalPrice" step="0.01" required>
                     </div>
