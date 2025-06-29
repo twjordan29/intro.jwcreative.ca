@@ -1,3 +1,4 @@
 config.php
 .htaccess
 index.php
+api/update-response.php

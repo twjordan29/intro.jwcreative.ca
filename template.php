@@ -99,26 +99,17 @@
           <img src="images/<?= htmlspecialchars($lead['demo1_image']) ?>" alt="<?= $lead['demo1_type'] ?>"
             class="demo-image" />
           <h3><?= htmlspecialchars($lead['demo1_title']) ?></h3>
-          <p>
-            <?= htmlspecialchars($lead['demo1_desc']) ?>
-          </p>
         </div>
 
         <div class="demo-card" onclick="window.open('<?= $lead['demo2_url'] ?>', '_blank')">
           <img src="images/<?= htmlspecialchars($lead['demo2_image']) ?>" alt="<?= $lead['demo2_type'] ?>"
             class="demo-image" />
           <h3><?= htmlspecialchars($lead['demo2_title']) ?></h3>
-          <p>
-            <?= htmlspecialchars($lead['demo2_desc']) ?>
-          </p>
         </div>
         <div class="demo-card" onclick="window.open('<?= $lead['demo3_url'] ?>', '_blank')">
           <img src="images/<?= htmlspecialchars($lead['demo3_image']) ?>" alt="<?= $lead['demo3_type'] ?>"
             class="demo-image" />
           <h3><?= htmlspecialchars($lead['demo3_title']) ?></h3>
-          <p>
-            <?= htmlspecialchars($lead['demo3_desc']) ?>
-          </p>
         </div>
 
       </div>
